@@ -1,0 +1,50 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "react-template",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack -p --color",
+    "build:css": "postcss ./client/stylesheets/app.css -c postcss.config.js -d ./public/css/",
+    "build:watch": "npm run build:css -- --watch & npm run build -- --watch",
+    "lint": "tslint -c tslint.json -p tsconfig.json -t verbose './client/**/*.{ts,tsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makki0205/wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makki0205/wiki/issues"
+  },
+  "homepage": "https://github.com/makki0205/wiki#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.2",
+    "@types/react-dom": "^15.5.3",
+    "clean-webpack-plugin": "^0.1.16",
+    "concurrently": "^3.5.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "npm-run-all": "^4.0.2",
+    "postcss": "^6.0.9",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^10.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint-config-standard": "^17.0.0",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.6.0",
+    "tslint-react": "^3.2.0",
+    "typed-css-modules": "^0.3.0",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.4"
+  }
+}
